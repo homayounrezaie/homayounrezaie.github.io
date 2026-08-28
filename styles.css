@@ -696,9 +696,8 @@ main > .section::-webkit-scrollbar {
 
 .project-video {
   position: relative;
-  height: auto;
+  height: min(600px, 62.5vw);
   min-height: 0;
-  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: 1px solid var(--glass-line);
   border-radius: 16px;
