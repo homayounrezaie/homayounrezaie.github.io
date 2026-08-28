@@ -664,6 +664,10 @@ main > .section::-webkit-scrollbar {
   grid-template-columns: 1fr;
 }
 
+.project-heatlive {
+  grid-template-columns: 1fr;
+}
+
 .project-thermolabs {
   grid-template-columns: 1fr;
 }
@@ -672,6 +676,7 @@ main > .section::-webkit-scrollbar {
   grid-template-columns: 1fr;
 }
 
+.project-heatlive .project-copy,
 .project-brooksie .project-copy,
 .project-thermolabs .project-copy,
 .project-awesome-geoai .project-copy {
@@ -679,6 +684,7 @@ main > .section::-webkit-scrollbar {
   grid-row: 1;
 }
 
+.project-heatlive .project-video,
 .project-brooksie .project-slider,
 .project-thermolabs .project-slider,
 .project-awesome-geoai .project-static-preview {
@@ -686,6 +692,20 @@ main > .section::-webkit-scrollbar {
   grid-row: 2;
   width: min(100%, 960px);
   justify-self: center;
+}
+
+.project-video {
+  overflow: hidden;
+  border: 1px solid var(--glass-line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--glass), transparent 10%);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--nav-active), transparent 54%);
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .project-brooksie .slider-track,
@@ -1970,7 +1990,10 @@ main > .section::-webkit-scrollbar {
   .project-copy,
   .project-visual,
   .project-slider,
+  .project-video,
   .project-static-preview,
+  .project-heatlive .project-copy,
+  .project-heatlive .project-video,
   .project-brooksie .project-copy,
   .project-thermolabs .project-copy,
   .project-awesome-geoai .project-copy,
@@ -1987,6 +2010,7 @@ main > .section::-webkit-scrollbar {
 
   .project-visual,
   .project-slider,
+  .project-video,
   .project-static-preview {
     order: 2;
   }
