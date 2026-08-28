@@ -207,22 +207,25 @@
                 observations and forecasts, allowing heat loss to be evaluated
                 under location-specific outdoor conditions.
               </p>
-              <div class="weather-data" aria-label="Weather parameters retrieved for each city">
-                <strong>Weather API parameters</strong>
-                <ul>
-                  <li>Air temperature</li>
-                  <li>Apparent temperature</li>
-                  <li>Relative humidity</li>
-                  <li>Dew point</li>
-                  <li>Atmospheric pressure</li>
-                  <li>Wind speed</li>
-                  <li>Wind direction</li>
-                  <li>Wind gusts</li>
-                  <li>Cloud cover</li>
-                  <li>Precipitation</li>
-                  <li>Solar irradiance</li>
-                  <li>Weather condition</li>
-                </ul>
+              <div class="weather-data" aria-label="Example weather API response for a city">
+                <div class="api-toolbar">
+                  <span class="api-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <code><b>GET</b> /weather?city={city}</code>
+                </div>
+                <pre><code>{
+  "air_temperature":     { "value": 30.1,  "unit": "°C" },
+  "apparent_temperature":{ "value": 29.4,  "unit": "°C" },
+  "relative_humidity":   { "value": 29,    "unit": "%" },
+  "dew_point":           { "value": 10.1,  "unit": "°C" },
+  "atmospheric_pressure":{ "value": 101.2, "unit": "kPa" },
+  "wind_speed":          { "value": 3.2,   "unit": "m/s" },
+  "wind_direction":      { "value": 62,    "unit": "° NE" },
+  "wind_gusts":          { "value": 5.6,   "unit": "m/s" },
+  "cloud_cover":         { "value": 0,     "unit": "%" },
+  "precipitation":       { "value": 0,     "unit": "mm" },
+  "solar_irradiance":    { "value": 348,   "unit": "W/m²" },
+  "weather_condition":   "clear"
+}</code></pre>
               </div>
             </div>
             <div class="project-video">
