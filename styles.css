@@ -695,6 +695,10 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-video {
+  position: relative;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid var(--glass-line);
   border-radius: 16px;
@@ -704,8 +708,9 @@ main > .section::-webkit-scrollbar {
 
 .project-video video {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .project-brooksie .slider-track,
@@ -1192,10 +1197,24 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 7px 12px;
+  border: 1px solid color-mix(in srgb, #f59e0b, transparent 28%);
+  border-radius: 999px;
   margin-bottom: 12px;
-  color: var(--accent);
-  font-size: 0.9rem;
-  font-weight: 750;
+  background: linear-gradient(135deg, color-mix(in srgb, #f59e0b, transparent 84%), color-mix(in srgb, #facc15, transparent 90%));
+  box-shadow: 0 5px 18px color-mix(in srgb, #f59e0b, transparent 84%);
+  color: color-mix(in srgb, #b45309, var(--text) 28%);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+:root.dark .project-status {
+  color: #fcd34d;
 }
 
 .project-actions {
