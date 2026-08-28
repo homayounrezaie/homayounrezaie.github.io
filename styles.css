@@ -1196,6 +1196,28 @@ main > .section::-webkit-scrollbar {
   margin-top: 12px;
 }
 
+.project-equations {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.project-equations p {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 9px 12px;
+  overflow-x: auto;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: color-mix(in srgb, var(--accent-soft), transparent 35%);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.94rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
 .project-status {
   display: inline-flex;
   align-items: center;

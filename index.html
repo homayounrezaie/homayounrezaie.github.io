@@ -184,11 +184,26 @@
             <div class="project-copy">
               <h3>01 HeatLive</h3>
               <p>
-                HeatLive combines high-resolution thermal and LiDAR data to
-                create a detailed 3D building model that visualizes annual
-                energy consumption, rooftop heat loss, and thermal plumes. It
-                also simulates energy loss under changing outdoor conditions,
-                including temperature and wind.
+                HeatLive fuses radiometrically calibrated, high-resolution
+                thermal imagery with co-registered LiDAR point clouds to
+                reconstruct a thermally attributed 3D building envelope. The
+                model maps rooftop heat-loss anomalies and thermal plumes while
+                estimating annual energy demand from time-varying indoor and
+                outdoor boundary conditions.
+              </p>
+              <div class="project-equations" aria-label="HeatLive heat-transfer equations">
+                <p>
+                  <span>E<sub>loss</sub> = ∫<sub>0</sub><sup>1 yr</sup> Σ<sub>i</sub> U<sub>i</sub>A<sub>i</sub>[T<sub>in</sub>(t) − T<sub>out</sub>(t)] dt</span>
+                </p>
+                <p>
+                  <span>q″<sub>ext</sub> = h<sub>c</sub>(v)[T<sub>s</sub> − T<sub>out</sub>] + εσ[T<sub>s</sub><sup>4</sup> − T<sub>sky</sub><sup>4</sup>]</span>
+                </p>
+              </div>
+              <p>
+                Wind-dependent convection, long-wave radiation, surface
+                temperature, and weather time series drive the simulation, so
+                heat loss can be evaluated under realistic changes in air
+                temperature, wind speed, and sky conditions.
               </p>
             </div>
             <div class="project-video">
