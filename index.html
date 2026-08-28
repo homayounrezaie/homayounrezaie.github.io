@@ -201,10 +201,29 @@
               </div>
               <p>
                 Wind-dependent convection, long-wave radiation, surface
-                temperature, and weather time series drive the simulation, so
-                heat loss can be evaluated under realistic changes in air
-                temperature, wind speed, and sky conditions.
+                temperature, and weather time series drive the simulation.
+                For each selected city, HeatLive resolves its geographic
+                coordinates and sends a REST API GET request for hourly weather
+                observations and forecasts, allowing heat loss to be evaluated
+                under location-specific outdoor conditions.
               </p>
+              <div class="weather-data" aria-label="Weather parameters retrieved for each city">
+                <strong>Weather API parameters</strong>
+                <ul>
+                  <li>Air temperature</li>
+                  <li>Apparent temperature</li>
+                  <li>Relative humidity</li>
+                  <li>Dew point</li>
+                  <li>Atmospheric pressure</li>
+                  <li>Wind speed</li>
+                  <li>Wind direction</li>
+                  <li>Wind gusts</li>
+                  <li>Cloud cover</li>
+                  <li>Precipitation</li>
+                  <li>Solar irradiance</li>
+                  <li>Weather condition</li>
+                </ul>
+              </div>
             </div>
             <div class="project-video">
               <video autoplay muted loop playsinline controls preload="metadata" aria-label="HeatLive 3D building energy and heat-loss simulation">
