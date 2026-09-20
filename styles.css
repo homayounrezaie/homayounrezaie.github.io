@@ -358,10 +358,10 @@ main > .section::-webkit-scrollbar {
 
 .hero-inner {
   width: min(90%, 1120px);
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 28px;
   margin: 0 auto;
 }
 
@@ -372,7 +372,7 @@ main > .section::-webkit-scrollbar {
   align-items: center;
   flex-direction: column;
   gap: 18px;
-  min-height: 360px;
+  min-height: 0;
 }
 
 .profile-frame {
@@ -396,8 +396,11 @@ main > .section::-webkit-scrollbar {
 }
 
 .intro {
+  display: grid;
+  justify-items: center;
   max-width: 560px;
   letter-spacing: 0;
+  text-align: center;
 }
 
 .intro h1 {
@@ -416,6 +419,7 @@ main > .section::-webkit-scrollbar {
 .social-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 24px;
 }
@@ -2685,27 +2689,9 @@ main > .section::-webkit-scrollbar {
     padding: 40px 24px calc(96px + env(safe-area-inset-bottom));
   }
 
-  /* Flatten the photo column so face, text and the Mom note become siblings
-     and can be ordered: identity first, the delight after. */
   .hero-inner {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
-
-  .photo-wrap {
-    display: contents;
-  }
-
-  .profile-frame {
-    order: 1;
-  }
-
-  .intro {
-    order: 2;
-    margin-top: 22px;
+    gap: 22px;
   }
 
   /* 112px reads as an avatar, not a portrait. The light ring is kept but
@@ -2719,9 +2705,6 @@ main > .section::-webkit-scrollbar {
   }
 
   .intro {
-    display: grid;
-    justify-items: center;
-    text-align: center;
     max-width: none;
   }
 
