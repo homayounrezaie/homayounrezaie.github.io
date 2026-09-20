@@ -582,7 +582,13 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-vea {
-  --vea-media-h: min(58svh, 540px);
+  grid-template-columns: 1fr;
+  --vea-media-h: min(58svh, 520px);
+}
+
+.project-vea .project-copy {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .project-heatlive .project-copy,
@@ -604,8 +610,8 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-vea .project-static-preview {
-  grid-column: 2;
-  grid-row: 1;
+  grid-column: 1;
+  grid-row: 2;
   aspect-ratio: 25 / 21;
   height: auto;
   max-height: var(--vea-media-h);
@@ -1133,9 +1139,17 @@ main > .section::-webkit-scrollbar {
   margin-top: 12px;
 }
 
-/* Each question sits on its own line. On narrow screens the longer ones
-   wrap anyway, so let the browser balance those breaks. */
-.project-questions {
+/* The three opening questions are a standfirst, not body copy: set them in
+   the serif already in the stack, a step up in size and a little tighter, so
+   they read as the lead-in they are. Each sits on its own line; on narrow
+   screens the longer ones wrap, so let the browser balance those breaks. */
+.project-copy p.project-questions {
+  margin-bottom: 18px;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(18px, 0.86rem + 0.92vw, 23px);
+  line-height: 1.42;
+  letter-spacing: -0.004em;
   text-wrap: pretty;
 }
 
@@ -2655,19 +2669,7 @@ main > .section::-webkit-scrollbar {
    the full card width once the side column is too narrow to read it in. */
 @media (max-width: 1099px) {
   .project-vea {
-    grid-template-columns: 1fr;
-    --vea-media-h: min(48svh, 480px);
-  }
-
-  .project-vea .project-copy {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .project-vea .project-static-preview {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: center;
+    --vea-media-h: min(48svh, 460px);
   }
 }
 
