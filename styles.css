@@ -2811,3 +2811,22 @@ main > .section::-webkit-scrollbar {
     --ag-media-h: min(46svh, 380px);
   }
 }
+
+/* Phones cannot decode the HeatLive footage, so say so there rather than
+   leave a dead frame. Hidden everywhere it does play. */
+.video-note {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .video-note {
+    display: block;
+    grid-column: 1;
+    grid-row: auto;
+    order: 3;
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.86rem;
+    text-align: center;
+  }
+}
