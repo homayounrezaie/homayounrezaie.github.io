@@ -1133,6 +1133,12 @@ main > .section::-webkit-scrollbar {
   margin-top: 12px;
 }
 
+/* Each question sits on its own line. On narrow screens the longer ones
+   wrap anyway, so let the browser balance those breaks. */
+.project-questions {
+  text-wrap: pretty;
+}
+
 .weather-data {
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--nav-active), transparent 65%);
