@@ -2779,19 +2779,12 @@ main > .section::-webkit-scrollbar {
    own ratio and bound it by viewport height, so it fills edge to edge and
    the card fits the screen.
    --------------------------------------------------------------------------- */
-.project-heatlive {
-  --hl-media-h: min(46svh, 470px);
-}
-
 .project-heatlive .project-video {
   aspect-ratio: 3840 / 1896;
   height: auto;
-  max-height: var(--hl-media-h);
-  width: min(100%, 960px, calc(var(--hl-media-h) * 3840 / 1896));
-}
-
-@media (max-width: 767px) {
-  .project-heatlive {
-    --hl-media-h: min(38svh, 320px);
-  }
+  /* Same width rule as the Agentic GeoAI slider so the two media blocks line
+     up; the height cap only bites on short viewports, where it keeps the card
+     inside its page. */
+  width: min(100%, 960px);
+  max-height: 62svh;
 }
