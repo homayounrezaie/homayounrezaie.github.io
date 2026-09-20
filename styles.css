@@ -1139,17 +1139,12 @@ main > .section::-webkit-scrollbar {
   margin-top: 12px;
 }
 
-/* The three opening questions are a standfirst, not body copy: set them in
-   the serif already in the stack, a step up in size and a little tighter, so
-   they read as the lead-in they are. Each sits on its own line; on narrow
-   screens the longer ones wrap, so let the browser balance those breaks. */
+/* The three opening questions are a lead-in: same face and size as the body
+   copy, set apart only by style. */
 .project-copy p.project-questions {
   margin-bottom: 18px;
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(18px, 0.86rem + 0.92vw, 23px);
-  line-height: 1.42;
-  letter-spacing: -0.004em;
+  font-style: italic;
   text-wrap: pretty;
 }
 
