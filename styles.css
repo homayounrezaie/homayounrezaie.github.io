@@ -2788,3 +2788,14 @@ main > .section::-webkit-scrollbar {
   width: min(100%, 960px);
   max-height: 62svh;
 }
+
+/* The showcase's top margin cleared the "Recent Projects" heading, and the
+   first card's top padding separated it from the card above. Neither exists
+   now, so the first project starts at the section's own top inset. */
+.project-showcase {
+  margin-top: 0;
+}
+
+.project-showcase > .featured-project:first-child {
+  padding-top: 0;
+}
