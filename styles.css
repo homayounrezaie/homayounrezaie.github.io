@@ -395,101 +395,6 @@ main > .section::-webkit-scrollbar {
   transform: scale(1.2);
 }
 
-.mom-note {
-  position: relative;
-  z-index: 2;
-}
-
-.mom-note summary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  border: 1px solid color-mix(in srgb, var(--nav-active), transparent 42%);
-  border-radius: 999px;
-  background: linear-gradient(145deg, color-mix(in srgb, var(--nav-active), transparent 88%), var(--glass-strong));
-  box-shadow: 0 14px 34px color-mix(in srgb, var(--nav-active), transparent 82%);
-  backdrop-filter: blur(18px) saturate(145%);
-  color: var(--text);
-  padding: 0 12px 0 10px;
-  cursor: pointer;
-  font-size: 0.72rem;
-  font-weight: 700;
-  list-style: none;
-  user-select: none;
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
-}
-
-.mom-note summary::-webkit-details-marker {
-  display: none;
-}
-
-.mom-note summary svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: var(--nav-active);
-  stroke-width: 1.9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.mom-note summary:hover,
-.mom-note[open] summary {
-  border-color: color-mix(in srgb, var(--nav-active), transparent 18%);
-  color: var(--nav-active);
-  box-shadow: 0 18px 42px color-mix(in srgb, var(--nav-active), transparent 76%);
-  transform: translateY(-1px);
-}
-
-.mom-note summary:active {
-  transform: scale(0.96);
-}
-
-.mom-note-card {
-  position: absolute;
-  left: 50%;
-  top: 52px;
-  width: min(300px, 72vw);
-  border: 1px solid var(--glass-line);
-  border-radius: 18px;
-  background: linear-gradient(145deg, var(--glass-strong), var(--glass));
-  box-shadow: 0 20px 52px color-mix(in srgb, var(--text), transparent 84%);
-  backdrop-filter: blur(20px) saturate(150%);
-  color: var(--muted);
-  padding: 13px 14px;
-  transform: translateX(-50%);
-}
-
-.mom-note-card::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -7px;
-  width: 14px;
-  height: 14px;
-  border-left: 1px solid var(--glass-line);
-  border-top: 1px solid var(--glass-line);
-  background: var(--glass);
-  transform: translateX(-50%) rotate(45deg);
-  backdrop-filter: blur(18px);
-}
-
-.mom-note p {
-  margin: 0;
-  font-size: 0.72rem;
-  line-height: 1.38;
-}
-
-.mom-note p + p {
-  margin-top: 8px;
-}
-
-.mom-note strong {
-  color: var(--text);
-  font-weight: 800;
-}
-
 .intro {
   max-width: 560px;
   letter-spacing: 0;
@@ -2053,22 +1958,6 @@ main > .section::-webkit-scrollbar {
     gap: 22px;
   }
 
-  .mom-note {
-    position: static;
-    transform: none;
-  }
-
-  .mom-note-card {
-    position: absolute;
-    width: min(100%, 360px);
-    margin-top: 0;
-    transform: translateX(-50%);
-  }
-
-  .mom-note-card::before {
-    display: block;
-  }
-
   .section {
     flex: 0 0 100vw;
     height: 100svh;
@@ -2843,31 +2732,10 @@ main > .section::-webkit-scrollbar {
     margin-top: 22px;
   }
 
-  .mom-note {
-    order: 3;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 30px;
-    transform: none;
-  }
-
-  /* Expand in place rather than floating a card that runs off the screen. */
-  .mom-note-card {
-    position: static;
-    width: min(100%, 320px);
-    /* auto inline margins: <details> wraps its content in an anonymous slot,
-       so the parent's align-items cannot reach this box. */
-    margin: 12px auto 0;
-    transform: none;
-  }
-
   /* 112px reads as an avatar, not a portrait. The light ring is kept but
      scaled to the smaller frame - 10px around a 260px photo is 5px here. */
   .profile-frame {
-    width: 112px;
+    width: 132px;
     border: 1px solid var(--glass-line);
     box-shadow:
       0 12px 32px color-mix(in srgb, var(--text), transparent 86%),
@@ -2908,20 +2776,6 @@ main > .section::-webkit-scrollbar {
     border-radius: 12px;
     background: var(--glass-strong);
     box-shadow: none;
-  }
-
-  /* Quiet enough that the name stays the loudest thing on the screen. */
-  .mom-note summary {
-    border-color: color-mix(in srgb, var(--line), transparent 20%);
-    background: none;
-    box-shadow: none;
-    backdrop-filter: none;
-    color: var(--muted);
-    font-weight: 600;
-  }
-
-  .mom-note summary svg {
-    stroke: var(--muted);
   }
 
   /* A transient swipe hint should not sit beside the name. */

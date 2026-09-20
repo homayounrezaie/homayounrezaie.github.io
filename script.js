@@ -23,21 +23,6 @@ if (toggle) {
   });
 }
 
-const momNote = document.querySelector(".mom-note");
-
-document.addEventListener("click", (event) => {
-  if (!momNote?.open || momNote.contains(event.target)) return;
-  momNote.open = false;
-});
-
-document.addEventListener(
-  "scroll",
-  () => {
-    if (momNote?.open) momNote.open = false;
-  },
-  { passive: true },
-);
-
 const modal = document.querySelector("[data-image-modal]");
 const modalImage = document.querySelector("[data-modal-target]");
 const modalButtons = Array.from(document.querySelectorAll("[data-modal-image]"));
@@ -460,7 +445,6 @@ pageEdgeButtons.forEach((button) => {
 pageTrack?.addEventListener(
   "scroll",
   () => {
-    if (momNote?.open) momNote.open = false;
     if (!pagedModeQuery.matches || pageScrollFrame) return;
 
     pageScrollFrame = requestAnimationFrame(() => {
@@ -486,7 +470,7 @@ window.addEventListener(
 
 const isPullRefreshExcluded = (target) =>
   target.closest(
-    "a, button, summary, input, textarea, select, [data-slider], .image-modal, .section-nav, .mom-note, .mobile-social-footer, .footer, .page-edge",
+    "a, button, summary, input, textarea, select, [data-slider], .image-modal, .section-nav, .mobile-social-footer, .footer, .page-edge",
   );
 
 const setPullRefreshProgress = (distance, isReady = false) => {
@@ -598,7 +582,7 @@ const isPageSwipeExcluded = (target) => {
   if (target.closest(".page-edge")) return false;
 
   return target.closest(
-    "a, button, summary, input, textarea, select, [data-slider], .image-modal, .section-nav, .mom-note, .mobile-social-footer, .footer",
+    "a, button, summary, input, textarea, select, [data-slider], .image-modal, .section-nav, .mobile-social-footer, .footer",
   );
 };
 
