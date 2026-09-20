@@ -2794,3 +2794,20 @@ main > .section::-webkit-scrollbar {
 .project-showcase > .featured-project:first-child {
   padding-top: 0;
 }
+
+/* Awesome GeoAI: at 960x640 this was the tallest media on the page and pushed
+   its card to 966px inside an 810px page. Bound it by viewport height like the
+   other cards so it scales down with the screen instead of overflowing. */
+.project-awesome-geoai {
+  --ag-media-h: min(54svh, 460px);
+}
+
+.project-awesome-geoai .project-static-preview {
+  width: min(100%, calc(var(--ag-media-h) * 3 / 2));
+}
+
+@media (max-width: 767px) {
+  .project-awesome-geoai {
+    --ag-media-h: min(46svh, 380px);
+  }
+}
