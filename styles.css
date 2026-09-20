@@ -2027,10 +2027,6 @@ main > .section::-webkit-scrollbar {
     grid-row: auto;
   }
 
-  .project-vea {
-    --vea-media-h: min(46svh, 420px);
-  }
-
   .project-vea .project-static-preview {
     grid-column: 1;
     grid-row: auto;
@@ -2085,7 +2081,6 @@ main > .section::-webkit-scrollbar {
 
   .project-vea .project-static-preview {
     min-height: 0;
-    aspect-ratio: 25 / 21;
   }
 
   .project-vea .project-static-preview figure {
@@ -2660,8 +2655,8 @@ main > .section::-webkit-scrollbar {
   }
 }
 
-/* The Virtual Energy Assessment demo is nearly square, so it stacks and takes
-   the full card width once the side column is too narrow to read it in. */
+/* The demo is nearly square, so give it a shorter cap as the viewport
+   narrows and the card has less height to spend. */
 @media (max-width: 1099px) {
   .project-vea {
     --vea-media-h: min(48svh, 460px);
