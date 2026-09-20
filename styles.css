@@ -676,10 +676,15 @@ main > .section::-webkit-scrollbar {
   grid-template-columns: 1fr;
 }
 
+.project-vea {
+  grid-template-columns: 1fr;
+}
+
 .project-heatlive .project-copy,
 .project-brooksie .project-copy,
 .project-thermolabs .project-copy,
-.project-awesome-geoai .project-copy {
+.project-awesome-geoai .project-copy,
+.project-vea .project-copy {
   grid-column: 1;
   grid-row: 1;
 }
@@ -687,11 +692,16 @@ main > .section::-webkit-scrollbar {
 .project-heatlive .project-video,
 .project-brooksie .project-slider,
 .project-thermolabs .project-slider,
-.project-awesome-geoai .project-static-preview {
+.project-awesome-geoai .project-static-preview,
+.project-vea .project-static-preview {
   grid-column: 1;
   grid-row: 2;
   width: min(100%, 960px);
   justify-self: center;
+}
+
+.project-vea .project-static-preview {
+  width: min(100%, 820px);
 }
 
 .project-video {
@@ -726,6 +736,13 @@ main > .section::-webkit-scrollbar {
 .project-awesome-geoai .project-static-preview,
 .project-awesome-geoai .project-static-preview figure {
   aspect-ratio: 3 / 2;
+}
+
+.project-vea .project-static-preview,
+.project-vea .project-static-preview figure {
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 25 / 21;
 }
 
 .featured-project + .featured-project {
@@ -1005,7 +1022,8 @@ main > .section::-webkit-scrollbar {
 
 .project-brooksie .slider-track .media-button,
 .project-thermolabs .slider-track .media-button,
-.project-awesome-geoai .project-static-preview .media-button {
+.project-awesome-geoai .project-static-preview .media-button,
+.project-vea .project-static-preview .media-button {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1014,7 +1032,8 @@ main > .section::-webkit-scrollbar {
 
 .project-brooksie .slider-track img,
 .project-thermolabs .slider-track img,
-.project-awesome-geoai .project-static-preview img {
+.project-awesome-geoai .project-static-preview img,
+.project-vea .project-static-preview img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -2104,6 +2123,8 @@ main > .section::-webkit-scrollbar {
   .project-brooksie .project-copy,
   .project-thermolabs .project-copy,
   .project-awesome-geoai .project-copy,
+  .project-vea .project-copy,
+  .project-vea .project-static-preview,
   .project-brooksie .project-slider,
   .project-thermolabs .project-slider,
   .project-awesome-geoai .project-static-preview {
@@ -2156,6 +2177,12 @@ main > .section::-webkit-scrollbar {
   .project-awesome-geoai .project-static-preview figure {
     min-height: 0;
     aspect-ratio: 16 / 10;
+  }
+
+  .project-vea .project-static-preview,
+  .project-vea .project-static-preview figure {
+    min-height: 0;
+    aspect-ratio: 25 / 21;
   }
 
   .project-brooksie .slider-track img,
