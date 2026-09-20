@@ -2803,3 +2803,133 @@ main > .section::-webkit-scrollbar {
     --vea-media-h: min(46svh, 420px);
   }
 }
+
+/* ---------------------------------------------------------------------------
+   About on phones: a centred identity card.
+
+   The portrait was 37% of the screen with 30% dead space under it, and the
+   text ran on a left axis while the photo sat on a centred one. One axis now,
+   the face sized as supporting evidence rather than the headline, and the
+   whole stack optically centred in the panel.
+   --------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px calc(96px + env(safe-area-inset-bottom));
+  }
+
+  /* Flatten the photo column so face, text and the Mom note become siblings
+     and can be ordered: identity first, the delight after. */
+  .hero-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .photo-wrap {
+    display: contents;
+  }
+
+  .profile-frame {
+    order: 1;
+  }
+
+  .intro {
+    order: 2;
+    margin-top: 22px;
+  }
+
+  .mom-note {
+    order: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    transform: none;
+  }
+
+  /* Expand in place rather than floating a card that runs off the screen. */
+  .mom-note-card {
+    position: static;
+    width: min(100%, 320px);
+    /* auto inline margins: <details> wraps its content in an anonymous slot,
+       so the parent's align-items cannot reach this box. */
+    margin: 12px auto 0;
+    transform: none;
+  }
+
+  /* 112px reads as an avatar, not a portrait. Hairline ring, no halo. */
+  .profile-frame {
+    width: 112px;
+    border: 1px solid color-mix(in srgb, var(--line), transparent 30%);
+    box-shadow: 0 4px 16px color-mix(in srgb, var(--text), transparent 92%);
+  }
+
+  .intro {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    max-width: none;
+  }
+
+  .intro h1 {
+    margin-bottom: 8px;
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+
+  .intro p {
+    margin-top: 0;
+    max-width: 30ch;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  /* Utility links, not cards: hairline only, no gradient or drop shadow. */
+  .social-links a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--glass-strong);
+    box-shadow: none;
+  }
+
+  /* Quiet enough that the name stays the loudest thing on the screen. */
+  .mom-note summary {
+    border-color: color-mix(in srgb, var(--line), transparent 20%);
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  .mom-note summary svg {
+    stroke: var(--muted);
+  }
+
+  /* A transient swipe hint should not sit beside the name. */
+  .page-edge-next {
+    align-content: end;
+    padding-bottom: 12%;
+  }
+
+  /* These invisible swipe targets were 52px on each edge: 26% of a 393px
+     screen, intercepting taps meant for content. */
+  .page-edge {
+    width: 28px;
+  }
+}
