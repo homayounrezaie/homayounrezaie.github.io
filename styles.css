@@ -1615,7 +1615,7 @@ main > .section::-webkit-scrollbar {
 .credential-grid article {
   display: flex;
   min-width: 0;
-  min-height: 150px;
+  min-height: 196px;
   flex-direction: column;
   border: 1px solid var(--glass-line);
   border-radius: 18px;
@@ -1623,7 +1623,7 @@ main > .section::-webkit-scrollbar {
     radial-gradient(circle at top right, color-mix(in srgb, var(--nav-active), transparent 84%), transparent 36%),
     linear-gradient(145deg, var(--glass-strong), var(--glass));
   box-shadow: inset 0 1px 0 color-mix(in srgb, #ffffff, transparent 68%);
-  padding: 17px;
+  padding: 22px;
 }
 
 .credential-logo {
@@ -2811,5 +2811,18 @@ main > .section::-webkit-scrollbar {
     color: var(--muted);
     font-size: 0.86rem;
     text-align: center;
+  }
+}
+
+/* Certifications sat as a squat strip pinned to the top of a 100svh page with
+   ~500px of dead space under it. Let the grid take the leftover height and
+   centre its row in it. "safe" so that if the content ever outgrows the panel
+   it falls back to top-alignment instead of overflowing above the scroll
+   origin, where it could never be scrolled back into view. */
+@media (min-width: 768px) {
+  #certifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: safe center;
   }
 }
