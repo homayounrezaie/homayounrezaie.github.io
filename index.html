@@ -159,12 +159,16 @@
             <div class="project-copy">
               <h3>01 HeatLive</h3>
               <p>
-                HeatLive fuses radiometrically calibrated, high-resolution
-                thermal imagery with co-registered LiDAR point clouds to
-                reconstruct a thermally attributed 3D building envelope. The
-                model maps rooftop heat-loss anomalies and thermal plumes while
-                estimating annual energy demand from time-varying indoor and
-                outdoor boundary conditions.
+                How do we find the inefficient houses across a whole city? How
+                much energy is each building using? And how do we get people to
+                change their behavior?
+              </p>
+              <p>
+                HeatLive takes thermal images of entire cities, captured by
+                airplane at night, and uses heat transfer, machine learning, and
+                building science to find out. It also shows homeowners a real 3D
+                model of their own house, so the heat loss feels personal and
+                hard to ignore!
               </p>
               <div class="project-equations" aria-label="HeatLive heat-transfer equations">
                 <p>
@@ -174,14 +178,6 @@
                   <span>q″<sub>ext</sub> = h<sub>c</sub>(v)[T<sub>s</sub> − T<sub>out</sub>] + εσ[T<sub>s</sub><sup>4</sup> − T<sub>sky</sub><sup>4</sup>]</span>
                 </p>
               </div>
-              <p>
-                Wind-dependent convection, long-wave radiation, surface
-                temperature, and weather time series drive the simulation.
-                For each selected city, HeatLive resolves its geographic
-                coordinates and sends a REST API GET request for hourly weather
-                observations and forecasts, allowing heat loss to be evaluated
-                under location-specific outdoor conditions.
-              </p>
             </div>
             <div class="project-video">
               <video autoplay muted loop playsinline controls preload="metadata" aria-label="HeatLive 3D building energy and heat-loss simulation">

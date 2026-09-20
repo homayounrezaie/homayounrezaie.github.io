@@ -2864,11 +2864,14 @@ main > .section::-webkit-scrollbar {
     transform: none;
   }
 
-  /* 112px reads as an avatar, not a portrait. Hairline ring, no halo. */
+  /* 112px reads as an avatar, not a portrait. The light ring is kept but
+     scaled to the smaller frame - 10px around a 260px photo is 5px here. */
   .profile-frame {
     width: 112px;
-    border: 1px solid color-mix(in srgb, var(--line), transparent 30%);
-    box-shadow: 0 4px 16px color-mix(in srgb, var(--text), transparent 92%);
+    border: 1px solid var(--glass-line);
+    box-shadow:
+      0 12px 32px color-mix(in srgb, var(--text), transparent 86%),
+      0 0 0 5px color-mix(in srgb, var(--glass-strong), transparent 28%);
   }
 
   .intro {
@@ -2931,5 +2934,29 @@ main > .section::-webkit-scrollbar {
      screen, intercepting taps meant for content. */
   .page-edge {
     width: 28px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   HeatLive video: the footage is 3840x1896 (2.02:1) but the box was a flat
+   600px tall, so object-fit letterboxed it inside 127px of black bars and
+   pushed the card to 959px inside an 810px page. Give the box the footage's
+   own ratio and bound it by viewport height, so it fills edge to edge and
+   the card fits the screen.
+   --------------------------------------------------------------------------- */
+.project-heatlive {
+  --hl-media-h: min(46svh, 470px);
+}
+
+.project-heatlive .project-video {
+  aspect-ratio: 3840 / 1896;
+  height: auto;
+  max-height: var(--hl-media-h);
+  width: min(100%, 960px, calc(var(--hl-media-h) * 3840 / 1896));
+}
+
+@media (max-width: 767px) {
+  .project-heatlive {
+    --hl-media-h: min(38svh, 320px);
   }
 }
