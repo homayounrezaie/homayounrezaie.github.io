@@ -583,7 +583,7 @@ main > .section::-webkit-scrollbar {
 
 .project-vea {
   grid-template-columns: 1fr;
-  --vea-media-h: min(58svh, 520px);
+  --vea-media-h: min(66svh, 580px);
 }
 
 .project-vea .project-copy {
@@ -2659,7 +2659,7 @@ main > .section::-webkit-scrollbar {
    narrows and the card has less height to spend. */
 @media (max-width: 1099px) {
   .project-vea {
-    --vea-media-h: min(48svh, 460px);
+    --vea-media-h: min(56svh, 520px);
   }
 }
 
