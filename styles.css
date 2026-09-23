@@ -969,8 +969,25 @@ main > .section::-webkit-scrollbar {
   padding: 0;
 }
 
+/* Show 04 and 07 screenshots whole: no crop, no fade, dots below the frame. */
+.project-thermolabs .slider-track img,
 .project-gee-gui .slider-track img {
   object-fit: contain;
+}
+
+.project-thermolabs .slider-track::after,
+.project-gee-gui .slider-track::after {
+  display: none;
+}
+
+.project-thermolabs .project-slider,
+.project-gee-gui .project-slider {
+  padding-bottom: 34px;
+}
+
+.project-thermolabs .slider-dots,
+.project-gee-gui .slider-dots {
+  bottom: 2px;
 }
 
 .project-vea .project-static-preview img {
