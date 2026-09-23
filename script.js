@@ -436,6 +436,22 @@ sectionLinks.forEach((link) => {
   });
 });
 
+// Jump to a specific project: open the Projects page, then scroll inside it.
+document.querySelectorAll("[data-project-link]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const section = document.querySelector(link.getAttribute("href"));
+    const target = document.querySelector(link.dataset.projectLink);
+    if (!section || !target) return;
+
+    event.preventDefault();
+    // Set the vertical position instantly: a smooth scroll here gets cancelled by the page slide.
+    const top = section.scrollTop + target.getBoundingClientRect().top - section.getBoundingClientRect().top - 12;
+    section.scrollTop = Math.max(0, top);
+    syncSection(section, true);
+    scrollToPage(section);
+  });
+});
+
 pageEdgeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     goToPageByOffset(button.getAttribute("data-page-edge") === "next" ? 1 : -1);
