@@ -540,6 +540,18 @@ main > .section::-webkit-scrollbar {
 
 
 
+.section-intro {
+  max-width: 880px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.72;
+}
+
+.section-intro strong {
+  color: var(--text);
+}
+
 .band {
   background: transparent;
 }
@@ -2032,7 +2044,8 @@ main > .section::-webkit-scrollbar {
     line-height: 1.28;
   }
 
-  .intro p {
+  .intro p,
+  .section-intro {
     font-size: 0.94rem;
     line-height: 1.66;
   }
