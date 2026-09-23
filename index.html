@@ -378,20 +378,11 @@
             <div class="project-copy">
               <h3>05 2D Floor Plans to 3D-BIM</h3>
               <p>
-                During my master's thesis, I worked on 3D modeling for cities.
-                With remote sensing data, we can often reach LOD2, which means
-                we can model the outside shape of buildings. I built models
-                using photogrammetry and LiDAR data, but I still wanted to reach
-                LOD4, where indoor details also matter.
-              </p>
-              <p>
-                LOD4 is important for building energy modeling, but at that
-                time creating it was honestly painful. Later, when I had some
-                free time, I upgraded that workflow with OCR and deep learning
-                models. The pipeline reads 2D architectural drawings, extracts
-                plans, elevations, dimensions, walls, roofs, windows, doors, and
-                geometry, then generates a 3D gbXML model for energy simulation
-                and building performance analysis.
+                Remote sensing can model a building's outside (LOD2), but energy
+                modeling needs the inside too (LOD4), and building that by hand
+                was painful during my thesis. So I built a pipeline that uses
+                OCR and deep learning to read 2D architectural drawings and
+                generate a 3D gbXML model, ready for energy simulation.
               </p>
               <div class="project-actions">
                 <a class="action-primary" href="https://lnkd.in/g7ZiXqP8" target="_blank" rel="noreferrer">
