@@ -240,6 +240,13 @@
                 pulls live geospatial data and shows the answer right on the map.
                 No GIS work required.
               </p>
+              <p>
+                As agentic AI took off, I took GEE-GUI (project 07) one step
+                further: instead of menus and dialogs, a single prompt. Users
+                simply describe what they need, and the agent works with
+                geospatial and remote sensing data in
+                <strong>Google Earth Engine</strong> for them.
+              </p>
             </div>
           </article>
 
@@ -519,6 +526,120 @@
             </div>
           </article>
 
+          <article class="featured-project project-gee-gui">
+            <div class="project-slider" data-slider aria-label="GEE-GUI project slideshow">
+              <div class="slider-track">
+                <figure class="is-active" data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/interface-full.webp"
+                    data-modal-caption="GEE-GUI main window with toolboxes, map, and layer manager"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI interface preview"
+                  >
+                    <img src="projects/optimized/gee-gui/interface-960.webp" width="960" height="513" alt="GEE-GUI main window with toolboxes, map, and layer manager" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/image-selection-full.webp"
+                    data-modal-caption="GEE-GUI image selection dialog for satellite, bands, area, dates, and cloud cover"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI image selection preview"
+                  >
+                    <img src="projects/optimized/gee-gui/image-selection-960.webp" width="960" height="514" alt="GEE-GUI image selection dialog for satellite, bands, area, dates, and cloud cover" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/landsat8-scene-full.webp"
+                    data-modal-caption="Landsat 8 scene over northern Iran loaded through GEE-GUI"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI Landsat 8 scene preview"
+                  >
+                    <img src="projects/optimized/gee-gui/landsat8-scene-960.webp" width="960" height="500" alt="Landsat 8 scene over northern Iran loaded through GEE-GUI" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/ndvi-full.webp"
+                    data-modal-caption="NDVI map of Iran computed in Google Earth Engine"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI NDVI preview"
+                  >
+                    <img src="projects/optimized/gee-gui/ndvi-960.webp" width="960" height="608" alt="NDVI map of Iran computed in Google Earth Engine" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/srtm-full.webp"
+                    data-modal-caption="SRTM elevation model of Iran"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI SRTM elevation preview"
+                  >
+                    <img src="projects/optimized/gee-gui/srtm-960.webp" width="960" height="542" alt="SRTM elevation model of Iran" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/gee-gui/landsat-mosaic-full.webp"
+                    data-modal-caption="Landsat image collection footprints over Iran"
+                    data-modal-group="gee-gui"
+                    aria-label="Open GEE-GUI Landsat mosaic preview"
+                  >
+                    <img src="projects/optimized/gee-gui/landsat-mosaic-960.webp" width="960" height="579" alt="Landsat image collection footprints over Iran" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Slideshow controls">
+                <button type="button" data-slider-prev aria-label="Previous GEE-GUI preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <div class="slider-dots" aria-label="Slide position">
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show GEE-GUI interface"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show GEE-GUI image selection"></button>
+                  <button type="button" data-slide-dot="2" aria-label="Show GEE-GUI Landsat 8 scene"></button>
+                  <button type="button" data-slide-dot="3" aria-label="Show GEE-GUI NDVI"></button>
+                  <button type="button" data-slide-dot="4" aria-label="Show GEE-GUI SRTM elevation"></button>
+                  <button type="button" data-slide-dot="5" aria-label="Show GEE-GUI Landsat mosaic"></button>
+                </div>
+                <button type="button" data-slider-next aria-label="Next GEE-GUI preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-copy">
+              <h3>07 GEE-GUI</h3>
+              <p class="project-status">2020 · Desktop app for Google Earth Engine</p>
+              <p>
+                In 2020, <strong>Google Earth Engine</strong> was the hot topic
+                in remote sensing: petabytes of satellite imagery and planetary
+                scale processing, free for research. But using it meant writing
+                JavaScript or <strong>Python</strong>, and many researchers and
+                students who could benefit from it could not code.
+              </p>
+              <p>
+                So I built <strong>GEE-GUI</strong>, a desktop app that puts
+                Earth Engine behind menus, dialogs, and an interactive map. Pick
+                a satellite, bands, area, dates, and cloud cover, then run
+                classification (SVM, random forest, CART), clustering,
+                segmentation (SNIC, k-means), spectral indices like NDVI, and
+                accuracy assessment, without writing a single line of code.
+              </p>
+            </div>
+          </article>
+
           <article class="featured-project project-awesome-geoai">
             <div class="project-static-preview" aria-label="GeoAI ecosystem reference preview">
               <figure>
@@ -535,7 +656,7 @@
               </figure>
             </div>
             <div class="project-copy">
-              <h3>07 Awesome GeoAI</h3>
+              <h3>08 Awesome GeoAI</h3>
               <p>
                 A comprehensive reference for the geospatial AI ecosystem:
                 geo foundation models, datasets, companies, products, services,
