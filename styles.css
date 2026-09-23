@@ -1805,6 +1805,32 @@ main > .section::-webkit-scrollbar {
 @media (max-width: 767px) {
 }
 
+@media (min-width: 1024px) {
+  /* Fill the column at the plot's own aspect so 06 lines up with 05's right edge. */
+  .project-geointerpo .project-slider {
+    align-self: center;
+    padding-bottom: 34px;
+  }
+
+  .project-geointerpo .slider-track {
+    min-height: 0;
+    aspect-ratio: 506 / 613;
+  }
+
+  .project-geointerpo .slider-track::after {
+    display: none;
+  }
+
+  .project-geointerpo .slider-track figure {
+    min-height: 0;
+  }
+
+  .project-geointerpo .slider-dots {
+    bottom: 2px;
+  }
+}
+
+
 @media (min-width: 781px) and (max-width: 1439px) {
   .hero {
     padding-left: 180px;
