@@ -1558,29 +1558,6 @@ main > .section::-webkit-scrollbar {
   font-weight: 760;
 }
 
-.thermal-note {
-  position: relative;
-  max-width: 920px;
-  margin-top: 14px;
-  border-left: 3px solid color-mix(in srgb, var(--nav-active), transparent 18%);
-  color: var(--muted);
-  padding: 2px 0 2px 18px;
-  font-size: 0.95rem;
-  line-height: 1.72;
-}
-
-.research-lens {
-  margin-top: 24px;
-  border-top: 1px solid var(--line);
-  border-radius: 0;
-  padding: 20px 0;
-}
-
-.research-lens h3 {
-  margin-bottom: 10px;
-  font-size: 1.06rem;
-}
-
 .education-list {
   display: grid;
   gap: 22px;
@@ -2058,8 +2035,7 @@ main > .section::-webkit-scrollbar {
   }
 
   .intro p,
-  .section-intro,
-  .thermal-note {
+  .section-intro {
     font-size: 0.94rem;
     line-height: 1.66;
   }
