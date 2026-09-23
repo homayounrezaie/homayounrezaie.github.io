@@ -598,6 +598,10 @@ main > .section::-webkit-scrollbar {
   grid-template-columns: 1fr;
 }
 
+.project-wildfire {
+  grid-template-columns: 1fr;
+}
+
 .project-awesome-geoai {
   grid-template-columns: 1fr;
 }
