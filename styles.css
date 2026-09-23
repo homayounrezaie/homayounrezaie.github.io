@@ -1560,48 +1560,40 @@ main > .section::-webkit-scrollbar {
 
 .education-list {
   display: grid;
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
   margin-top: 22px;
   max-width: none;
 }
 
 .education-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px 24px;
-  padding-left: 22px;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  border: 1px solid var(--glass-line);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--nav-active), transparent 86%), transparent 40%),
+    linear-gradient(145deg, var(--glass-strong), var(--glass));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #ffffff, transparent 68%);
+  padding: 20px 22px;
 }
 
-.education-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--nav-active);
-  box-shadow: 0 0 0 5px color-mix(in srgb, var(--nav-active), transparent 84%);
-}
-
-.education-item::after {
-  content: "";
-  position: absolute;
-  left: 3px;
-  top: 20px;
-  bottom: -18px;
-  width: 1px;
-  background: color-mix(in srgb, var(--nav-active), transparent 62%);
-}
-
-.education-item:last-child::after {
-  display: none;
+/* The Ph.D. is the headline card: full width, a little more room. */
+.education-item.is-featured {
+  grid-column: 1 / -1;
+  padding: 26px 28px;
 }
 
 .education-item h3 {
   margin: 0;
   font-size: 1rem;
+  line-height: 1.35;
+}
+
+.education-item.is-featured h3 {
+  font-size: 1.18rem;
 }
 
 .education-item > div p {
@@ -1611,22 +1603,35 @@ main > .section::-webkit-scrollbar {
   font-weight: 650;
 }
 
+/* Dates as a small pill above the title. */
 .education-item > span {
-  color: var(--text);
-  font-size: 0.78rem;
+  order: -1;
+  align-self: flex-start;
+  margin-bottom: 6px;
+  border: 1px solid color-mix(in srgb, var(--nav-active), transparent 60%);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--nav-active), transparent 90%);
+  color: color-mix(in srgb, var(--nav-active), var(--text) 45%);
+  padding: 3px 10px;
+  font-size: 0.74rem;
   font-weight: 700;
   white-space: nowrap;
 }
 
 .education-item > p {
-  grid-column: 1 / -1;
-  max-width: 860px;
+  max-width: 820px;
+  margin-top: 4px;
   font-size: 0.92rem;
 }
 
 .education-item > .education-actions {
-  grid-column: 1 / -1;
-  margin-top: 4px;
+  margin-top: 10px;
+}
+
+@media (max-width: 1023px) {
+  .education-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -2217,13 +2222,12 @@ main > .section::-webkit-scrollbar {
     height: 64px;
   }
 
-  .education-item {
+  .education-list {
     grid-template-columns: 1fr;
-    gap: 6px;
   }
 
-  .education-item > span {
-    white-space: normal;
+  .education-item.is-featured {
+    padding: 20px 22px;
   }
 
   .award-list article {
