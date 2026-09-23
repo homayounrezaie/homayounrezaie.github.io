@@ -416,6 +416,17 @@ main > .section::-webkit-scrollbar {
   font-size: 1rem;
 }
 
+.intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 12px;
+  margin-top: 6px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: color-mix(in srgb, var(--nav-active), var(--text) 35%);
+}
+
 .social-links {
   display: flex;
   align-items: center;
