@@ -673,6 +673,72 @@
           </article>
 
           <article class="featured-project project-wildfire">
+            <div class="project-slider" data-slider aria-label="Wildfire detection slideshow">
+              <div class="slider-track">
+                <figure class="is-active" data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/wildfire/multisensor-full.webp"
+                    data-modal-caption="Sentinel-2 SWIR and true color next to ECOSTRESS land surface temperature for the same fire"
+                    data-modal-group="wildfire"
+                    aria-label="Open wildfire sensor comparison preview"
+                  >
+                    <img src="projects/optimized/wildfire/multisensor-960.webp" srcset="projects/optimized/wildfire/multisensor-960.webp 960w, projects/optimized/wildfire/multisensor-full.webp 2178w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="256" alt="Sentinel-2 SWIR and true color next to ECOSTRESS land surface temperature for the same fire" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/wildfire/rgb-vs-thermal-full.webp"
+                    data-modal-caption="HLS Sentinel-2 true color compared with ECOSTRESS land surface temperature"
+                    data-modal-group="wildfire"
+                    aria-label="Open wildfire true color vs thermal preview"
+                  >
+                    <img src="projects/optimized/wildfire/rgb-vs-thermal-960.webp" srcset="projects/optimized/wildfire/rgb-vs-thermal-960.webp 960w, projects/optimized/wildfire/rgb-vs-thermal-full.webp 1432w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="470" alt="HLS Sentinel-2 true color compared with ECOSTRESS land surface temperature" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/wildfire/active-fire-full.webp"
+                    data-modal-caption="HLS true color, ECOSTRESS brightness temperature, and flagged active fire pixels"
+                    data-modal-group="wildfire"
+                    aria-label="Open wildfire active fire detection preview"
+                  >
+                    <img src="projects/optimized/wildfire/active-fire-960.webp" srcset="projects/optimized/wildfire/active-fire-960.webp 960w, projects/optimized/wildfire/active-fire-full.webp 2090w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="313" alt="HLS true color, ECOSTRESS brightness temperature, and flagged active fire pixels" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/wildfire/hot-pixels-full.webp"
+                    data-modal-caption="ECOSTRESS land surface temperature and pixels above the heat threshold"
+                    data-modal-group="wildfire"
+                    aria-label="Open wildfire hot pixels preview"
+                  >
+                    <img src="projects/optimized/wildfire/hot-pixels-960.webp" srcset="projects/optimized/wildfire/hot-pixels-960.webp 960w, projects/optimized/wildfire/hot-pixels-full.webp 1253w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="453" alt="ECOSTRESS land surface temperature and pixels above the heat threshold" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Slideshow controls">
+                <button type="button" data-slider-prev aria-label="Previous wildfire preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <div class="slider-dots" aria-label="Slide position">
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show wildfire sensor comparison"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show wildfire true color vs thermal"></button>
+                  <button type="button" data-slide-dot="2" aria-label="Show wildfire active fire detection"></button>
+                  <button type="button" data-slide-dot="3" aria-label="Show wildfire hot pixels"></button>
+                </div>
+                <button type="button" data-slider-next aria-label="Next wildfire preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
             <div class="project-copy">
               <h3>09 Multi-Sensor Wildfire Detection</h3>
               <p>
