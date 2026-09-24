@@ -3008,3 +3008,26 @@ main > .section::-webkit-scrollbar {
     max-width: 72ch;
   }
 }
+
+#projects {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--nav-active), transparent 45%) transparent;
+}
+
+#projects::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+}
+
+#projects::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#projects::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--nav-active), transparent 45%);
+}
+
+#projects::-webkit-scrollbar-thumb:hover {
+  background: var(--nav-active);
+}
