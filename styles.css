@@ -3063,3 +3063,33 @@ main > .section::-webkit-scrollbar {
     max-height: none;
   }
 }
+
+/* Phones: size slider frames with a percentage-padding spacer instead of
+   aspect-ratio. Every slide is absolutely positioned, so the frame's height
+   came only from aspect-ratio, and iOS kept the landscape height after
+   rotating back to portrait. Percentage padding always follows the width. */
+@media (max-width: 767px) {
+  .project-slider .slider-track,
+  .project-slider .slider-track figure {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .project-slider .slider-track figure {
+    height: auto;
+  }
+
+  .project-slider .slider-track::before {
+    content: "";
+    display: block;
+    padding-top: 62.5%;
+  }
+
+  .project-wildfire .slider-track::before {
+    padding-top: 50%;
+  }
+
+  .project-geointerpo .slider-track::before {
+    padding-top: calc(100% * 613 / 506);
+  }
+}
