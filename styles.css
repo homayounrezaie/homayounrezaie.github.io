@@ -2945,23 +2945,6 @@ main > .section::-webkit-scrollbar {
 
 /* Phones cannot decode the HeatLive footage, so say so there rather than
    leave a dead frame. Hidden everywhere it does play. */
-.video-note {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .video-note {
-    display: block;
-    grid-column: 1;
-    grid-row: auto;
-    order: 3;
-    margin: 10px 0 0;
-    color: var(--muted);
-    font-size: 0.86rem;
-    text-align: center;
-  }
-}
-
 /* Certifications sat as a squat strip pinned to the top of a 100svh page with
    ~500px of dead space under it. Let the grid take the leftover height and
    centre its row in it. "safe" so that if the content ever outgrows the panel
