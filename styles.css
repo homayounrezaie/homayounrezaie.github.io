@@ -1868,7 +1868,28 @@ main > .section::-webkit-scrollbar {
 
 }
 
+/* Phones: full-width plots at their own aspect, dots below the frame. */
 @media (max-width: 767px) {
+  .project-geointerpo .project-slider {
+    padding-bottom: 34px;
+  }
+
+  .project-geointerpo .slider-track {
+    min-height: 0;
+    aspect-ratio: 506 / 613;
+  }
+
+  .project-geointerpo .slider-track::after {
+    display: none;
+  }
+
+  .project-geointerpo .slider-track figure {
+    min-height: 0;
+  }
+
+  .project-geointerpo .slider-dots {
+    bottom: 2px;
+  }
 }
 
 @media (min-width: 1024px) {
