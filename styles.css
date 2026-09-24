@@ -2943,8 +2943,6 @@ main > .section::-webkit-scrollbar {
   }
 }
 
-/* Phones cannot decode the HeatLive footage, so say so there rather than
-   leave a dead frame. Hidden everywhere it does play. */
 /* Certifications sat as a squat strip pinned to the top of a 100svh page with
    ~500px of dead space under it. Let the grid take the leftover height and
    centre its row in it. "safe" so that if the content ever outgrows the panel
@@ -3017,4 +3015,26 @@ main > .section::-webkit-scrollbar {
 
 #projects::-webkit-scrollbar-thumb:hover {
   background: var(--nav-active);
+}
+
+/* Landscape phones are only ~400px tall, so the viewport-height caps above
+   shrink these three to thumbnails. Size them by width instead, like the
+   sliders; the section scrolls. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .project-vea {
+    --vea-media-h: 9999px;
+  }
+
+  .project-vea .project-static-preview {
+    width: min(100%, 960px);
+    max-height: none;
+  }
+
+  .project-awesome-geoai .project-static-preview {
+    width: min(100%, 960px);
+  }
+
+  .project-heatlive .project-video {
+    max-height: none;
+  }
 }
