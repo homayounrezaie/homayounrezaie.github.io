@@ -649,6 +649,16 @@ main > .section::-webkit-scrollbar {
   align-self: center;
 }
 
+.project-copy p a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor, transparent 55%);
+  text-underline-offset: 3px;
+}
+
+.project-copy p a:hover {
+  text-decoration-color: currentColor;
+}
+
 .project-video {
   position: relative;
   height: min(600px, 62.5vw);
