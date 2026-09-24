@@ -1078,12 +1078,16 @@ main > .section::-webkit-scrollbar {
   object-fit: contain;
 }
 
-/* The wildfire and roof figures are wide multi-panel plots. */
+/* The wildfire figures are wide multi-panel plots. */
 .project-wildfire .slider-track,
-.project-roof .slider-track,
-.project-roof .slider-track figure,
 .project-wildfire .slider-track figure {
   aspect-ratio: 12 / 5;
+}
+
+/* The roof figures mix wide, square and tall panels. */
+.project-roof .slider-track,
+.project-roof .slider-track figure {
+  aspect-ratio: 2 / 1;
 }
 
 .project-thermolabs .slider-dots,

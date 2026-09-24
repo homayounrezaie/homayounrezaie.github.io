@@ -19,7 +19,7 @@
     <meta property="og:image" content="https://homayounrezaie.github.io/images/profile.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://homayounrezaie.github.io/images/profile.jpeg" />
-    <link rel="stylesheet" href="styles.css?v=20260924b" />
+    <link rel="stylesheet" href="styles.css?v=20260924c" />
   </head>
   <body>
     <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
@@ -895,6 +895,30 @@
                   <button
                     class="media-button"
                     type="button"
+                    data-modal-image="projects/optimized/roof/rect-fit-full.webp"
+                    data-modal-caption="Two perpendicular rectangles fitted to a roof, with visible edges and the corners reconstructed under trees"
+                    data-modal-group="roof"
+                    aria-label="Open rectangle fitting preview"
+                  >
+                    <img src="projects/optimized/roof/rect-fit-960.webp" srcset="projects/optimized/roof/rect-fit-960.webp 960w, projects/optimized/roof/rect-fit-full.webp 1412w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="1184" alt="Two perpendicular rectangles fitted to a roof, with visible edges and the corners reconstructed under trees" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/edges-full.webp"
+                    data-modal-caption="Roof outlines of three houses, with the edges hidden by trees reconstructed at right angles"
+                    data-modal-group="roof"
+                    aria-label="Open reconstructed edges preview"
+                  >
+                    <img src="projects/optimized/roof/edges-960.webp" srcset="projects/optimized/roof/edges-960.webp 960w, projects/optimized/roof/edges-full.webp 2000w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="724" alt="Roof outlines of three houses, with the edges hidden by trees reconstructed at right angles" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
                     data-modal-image="projects/optimized/roof/rgb-full.webp"
                     data-modal-caption="Drone image of four neighbouring houses, with trees covering parts of the roofs"
                     data-modal-group="roof"
@@ -957,11 +981,13 @@
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
                 </button>
                 <div class="slider-dots" aria-label="Slide position">
-                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show RGB drone image"></button>
-                  <button type="button" data-slide-dot="1" aria-label="Show roof facet segmentation"></button>
-                  <button type="button" data-slide-dot="2" aria-label="Show facet graph and seams"></button>
-                  <button type="button" data-slide-dot="3" aria-label="Show recovered hidden edges"></button>
-                  <button type="button" data-slide-dot="4" aria-label="Show final roof polygons"></button>
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show rectangle fitting"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show reconstructed edges"></button>
+                  <button type="button" data-slide-dot="2" aria-label="Show RGB drone image"></button>
+                  <button type="button" data-slide-dot="3" aria-label="Show roof facet segmentation"></button>
+                  <button type="button" data-slide-dot="4" aria-label="Show facet graph and seams"></button>
+                  <button type="button" data-slide-dot="5" aria-label="Show recovered hidden edges"></button>
+                  <button type="button" data-slide-dot="6" aria-label="Show final roof polygons"></button>
                 </div>
                 <button type="button" data-slider-next aria-label="Next roof preview">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
