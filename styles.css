@@ -3019,27 +3019,30 @@ main > .section::-webkit-scrollbar {
   }
 }
 
-#projects {
-  scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--nav-active), transparent 45%) transparent;
-}
+/* Projects scrollbar: desktop only (mouse or trackpad), not on phones. */
+@media (hover: hover) and (pointer: fine) {
+  #projects {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--nav-active), transparent 45%) transparent;
+  }
 
-#projects::-webkit-scrollbar {
-  display: block;
-  width: 8px;
-}
+  #projects::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+  }
 
-#projects::-webkit-scrollbar-track {
-  background: transparent;
-}
+  #projects::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-#projects::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--nav-active), transparent 45%);
-}
+  #projects::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--nav-active), transparent 45%);
+  }
 
-#projects::-webkit-scrollbar-thumb:hover {
-  background: var(--nav-active);
+  #projects::-webkit-scrollbar-thumb:hover {
+    background: var(--nav-active);
+  }
 }
 
 /* Landscape phones are only ~400px tall, so the viewport-height caps above
