@@ -589,7 +589,8 @@ main > .section::-webkit-scrollbar {
   grid-template-columns: 1fr;
 }
 
-.project-heatlive {
+.project-heatlive,
+.project-flood {
   grid-template-columns: 1fr;
 }
 
@@ -614,6 +615,7 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-heatlive .project-copy,
+.project-flood .project-copy,
 .project-brooksie .project-copy,
 .project-thermolabs .project-copy,
 .project-gee-gui .project-copy,
@@ -624,6 +626,7 @@ main > .section::-webkit-scrollbar {
 }
 
 .project-heatlive .project-video,
+.project-flood .project-video,
 .project-brooksie .project-slider,
 .project-thermolabs .project-slider,
 .project-gee-gui .project-slider,
@@ -2088,7 +2091,9 @@ main > .section::-webkit-scrollbar {
   .project-video,
   .project-static-preview,
   .project-heatlive .project-copy,
+  .project-flood .project-copy,
   .project-heatlive .project-video,
+  .project-flood .project-video,
   .project-brooksie .project-copy,
   .project-thermolabs .project-copy,
   .project-gee-gui .project-copy,
