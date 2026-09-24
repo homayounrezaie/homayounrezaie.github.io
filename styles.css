@@ -3189,3 +3189,11 @@ main > .section::-webkit-scrollbar {
   color: var(--text);
   box-shadow: 0 8px 24px -8px var(--button-glow);
 }
+
+/* Phones: education cards sit 4px from the screen edges (section padding
+   is 20px). */
+@media (max-width: 767px) {
+  #education .education-list {
+    margin-inline: -16px;
+  }
+}
