@@ -596,7 +596,8 @@ main > .section::-webkit-scrollbar {
 
 .project-thermolabs,
 .project-gee-gui,
-.project-wildfire {
+.project-wildfire,
+.project-recovery {
   grid-template-columns: 1fr;
 }
 
@@ -620,6 +621,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .project-copy,
 .project-gee-gui .project-copy,
 .project-wildfire .project-copy,
+.project-recovery .project-copy,
 .project-awesome-geoai .project-copy {
   grid-column: 1;
   grid-row: 1;
@@ -631,6 +633,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .project-slider,
 .project-gee-gui .project-slider,
 .project-wildfire .project-slider,
+.project-recovery .project-slider,
 .project-awesome-geoai .project-static-preview {
   grid-column: 1;
   grid-row: 2;
@@ -662,16 +665,6 @@ main > .section::-webkit-scrollbar {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-.media-credit {
-  grid-column: 1;
-  grid-row: 4;
-  justify-self: center;
-  width: min(100%, 960px);
-  margin: -6px 0 0;
-  color: var(--muted);
-  font-size: 0.72rem;
 }
 
 .project-vea .project-static-preview {
@@ -718,9 +711,11 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track,
 .project-gee-gui .slider-track,
 .project-wildfire .slider-track,
+.project-recovery .slider-track,
 .project-thermolabs .slider-track figure,
 .project-gee-gui .slider-track figure,
 .project-wildfire .slider-track figure,
+.project-recovery .slider-track figure,
 .project-awesome-geoai .project-static-preview,
 .project-awesome-geoai .project-static-preview figure {
   height: auto;
@@ -1018,6 +1013,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track .media-button,
 .project-gee-gui .slider-track .media-button,
 .project-wildfire .slider-track .media-button,
+.project-recovery .slider-track .media-button,
 .project-awesome-geoai .project-static-preview .media-button,
 .project-vea .project-static-preview .media-button {
   position: absolute;
@@ -1030,6 +1026,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track img,
 .project-gee-gui .slider-track img,
 .project-wildfire .slider-track img,
+.project-recovery .slider-track img,
 .project-awesome-geoai .project-static-preview img {
   position: absolute;
   inset: 0;
@@ -1041,23 +1038,32 @@ main > .section::-webkit-scrollbar {
   padding: 0;
 }
 
-/* Show 04, 07 and 09 images whole: no crop, no fade, dots below the frame. */
+/* Show 05, 08, 10 and 11 images whole: no crop, no fade, dots below the frame. */
 .project-thermolabs .slider-track img,
 .project-gee-gui .slider-track img,
-.project-wildfire .slider-track img {
+.project-wildfire .slider-track img,
+.project-recovery .slider-track img {
   object-fit: contain;
 }
 
 .project-thermolabs .slider-track::after,
 .project-gee-gui .slider-track::after,
-.project-wildfire .slider-track::after {
+.project-wildfire .slider-track::after,
+.project-recovery .slider-track::after {
   display: none;
 }
 
 .project-thermolabs .project-slider,
 .project-gee-gui .project-slider,
-.project-wildfire .project-slider {
+.project-wildfire .project-slider,
+.project-recovery .project-slider {
   padding-bottom: 34px;
+}
+
+/* The recovery figures are mixed maps and charts. */
+.project-recovery .slider-track,
+.project-recovery .slider-track figure {
+  aspect-ratio: 3 / 2;
 }
 
 /* The wildfire figures are wide multi-panel plots. */
@@ -1068,7 +1074,8 @@ main > .section::-webkit-scrollbar {
 
 .project-thermolabs .slider-dots,
 .project-gee-gui .slider-dots,
-.project-wildfire .slider-dots {
+.project-wildfire .slider-dots,
+.project-recovery .slider-dots {
   bottom: 2px;
 }
 
@@ -2144,15 +2151,16 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .project-copy,
   .project-gee-gui .project-copy,
   .project-wildfire .project-copy,
+  .project-recovery .project-copy,
   .project-awesome-geoai .project-copy,
   .project-vea .project-copy,
   .project-brooksie .project-slider,
   .project-thermolabs .project-slider,
   .project-gee-gui .project-slider,
   .project-wildfire .project-slider,
+  .project-recovery .project-slider,
   .project-awesome-geoai .project-static-preview,
-  .project-flood .project-static-preview,
-  .media-credit {
+  .project-flood .project-static-preview {
     grid-column: 1;
     grid-row: auto;
   }
@@ -2175,10 +2183,6 @@ main > .section::-webkit-scrollbar {
 
   .project-flood .project-static-preview {
     order: 3;
-  }
-
-  .media-credit {
-    order: 4;
   }
 
   .project-copy {
@@ -2212,9 +2216,11 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .slider-track,
   .project-gee-gui .slider-track,
   .project-wildfire .slider-track,
+  .project-recovery .slider-track,
   .project-thermolabs .slider-track figure,
   .project-gee-gui .slider-track figure,
   .project-wildfire .slider-track figure,
+  .project-recovery .slider-track figure,
   .project-awesome-geoai .project-static-preview,
   .project-awesome-geoai .project-static-preview figure {
     min-height: 0;
@@ -2238,6 +2244,7 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .slider-track img,
   .project-gee-gui .slider-track img,
   .project-wildfire .slider-track img,
+  .project-recovery .slider-track img,
   .project-awesome-geoai .project-static-preview img {
     object-fit: contain;
     background: color-mix(in srgb, var(--band), transparent 35%);

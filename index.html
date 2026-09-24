@@ -328,7 +328,6 @@
                 </button>
               </figure>
             </div>
-            <p class="media-credit">Water depth from NASA's SWOT satellite. Image: NASA.</p>
           </article>
 
           <article class="featured-project project-thermolabs">
@@ -800,6 +799,80 @@
                 tested it on four major California fires, including the August
                 Complex and Dixie fires.
               </p>
+            </div>
+          </article>
+
+          <article class="featured-project project-recovery">
+            <div class="project-slider" data-slider aria-label="Post-disaster recovery slideshow">
+              <div class="slider-track">
+                <figure class="is-active" data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/recovery/haiyan-full.webp"
+                    data-modal-caption="Typhoon Haiyan path over Leyte island, with before and after imagery of Tacloban"
+                    data-modal-group="recovery"
+                    aria-label="Open Typhoon Haiyan before and after preview"
+                  >
+                    <img src="projects/optimized/recovery/haiyan-960.webp" srcset="projects/optimized/recovery/haiyan-960.webp 960w, projects/optimized/recovery/haiyan-full.webp 2000w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="622" alt="Typhoon Haiyan path over Leyte island, with before and after imagery of Tacloban" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/recovery/landcover-full.webp"
+                    data-modal-caption="Landsat composites and Random Forest land cover maps from before the typhoon to three years after"
+                    data-modal-group="recovery"
+                    aria-label="Open land cover time series preview"
+                  >
+                    <img src="projects/optimized/recovery/landcover-960.webp" srcset="projects/optimized/recovery/landcover-960.webp 960w, projects/optimized/recovery/landcover-full.webp 2000w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="1302" alt="Landsat composites and Random Forest land cover maps from before the typhoon to three years after" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/recovery/recovery-maps-full.webp"
+                    data-modal-caption="Damage ratio per municipality, then recovery ratio at three time steps"
+                    data-modal-group="recovery"
+                    aria-label="Open damage and recovery maps preview"
+                  >
+                    <img src="projects/optimized/recovery/recovery-maps-960.webp" srcset="projects/optimized/recovery/recovery-maps-960.webp 960w, projects/optimized/recovery/recovery-maps-full.webp 2000w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="464" alt="Damage ratio per municipality, then recovery ratio at three time steps" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Slideshow controls">
+                <button type="button" data-slider-prev aria-label="Previous recovery preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <div class="slider-dots" aria-label="Slide position">
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show Typhoon Haiyan before and after"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show land cover time series"></button>
+                  <button type="button" data-slide-dot="2" aria-label="Show damage and recovery maps"></button>
+                </div>
+                <button type="button" data-slider-next aria-label="Next recovery preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-copy">
+              <h3>11 Post-Disaster Recovery Monitoring</h3>
+              <p class="project-status">2020 <span class="project-status-sep" aria-hidden="true">·</span> Applied Sciences paper</p>
+              <p>
+                How fast does a region come back after a disaster? Using
+                <strong>Google Earth Engine</strong>, Landsat 7 and 8 imagery
+                was turned into cloud-free composites and classified with
+                <strong>Random Forest</strong> (over 88% accuracy) to map the
+                damage from Typhoon Haiyan and three years of recovery across
+                62 municipalities in the Philippines.
+              </p>
+              <div class="project-actions">
+                <a href="https://www.mdpi.com/2076-3417/10/13/4574" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                  Read the paper
+                </a>
+              </div>
             </div>
           </article>
         </div>
