@@ -1369,7 +1369,7 @@ main > .section::-webkit-scrollbar {
 .project-actions a {
   position: relative;
   display: inline-flex;
-  min-height: 38px;
+  min-height: 34px;
   align-items: center;
   gap: 7px;
   border: 1px solid color-mix(in srgb, var(--line), var(--text) 6%);
@@ -1377,8 +1377,8 @@ main > .section::-webkit-scrollbar {
   background: color-mix(in srgb, var(--bg), transparent 25%);
   backdrop-filter: blur(12px) saturate(140%);
   color: var(--text);
-  padding: 0 15px;
-  font-size: 0.84rem;
+  padding: 0 13px;
+  font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: -0.005em;
   box-shadow: 0 1px 2px color-mix(in srgb, var(--text), transparent 94%);
@@ -1711,7 +1711,32 @@ main > .section::-webkit-scrollbar {
 }
 
 .education-item > .education-actions {
-  margin-top: 10px;
+  gap: 6px 18px;
+  margin-top: 12px;
+}
+
+/* In the education cards the project links are plain green text links,
+   not buttons. */
+.project-actions.education-actions a,
+.project-actions.education-actions a:hover,
+.project-actions.education-actions a:active {
+  min-height: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  transform: none;
+  padding: 2px 0;
+  color: color-mix(in srgb, var(--nav-active), var(--text) 45%);
+  font-size: 0.86rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.project-actions.education-actions a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 @media (max-width: 1023px) {
@@ -2236,7 +2261,7 @@ main > .section::-webkit-scrollbar {
 
 
   .project-actions a {
-    min-height: 44px;
+    min-height: 36px;
     font-size: 0.82rem;
   }
 
