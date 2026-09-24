@@ -3093,3 +3093,34 @@ main > .section::-webkit-scrollbar {
     padding-top: calc(100% * 613 / 506);
   }
 }
+
+/* Phones in portrait: project media runs edge to edge. The section has 20px
+   side padding, so pull each media block out by that much and drop the
+   rounded corners and side borders that would sit against the screen edge. */
+@media (max-width: 767px) {
+  .featured-project .project-video,
+  .featured-project .project-slider,
+  .featured-project .project-static-preview,
+  .featured-project .project-visual {
+    width: calc(100% + 40px);
+    max-width: none;
+    max-height: none;
+    margin-inline: -20px;
+    align-self: stretch;
+    border-radius: 0;
+  }
+
+  .featured-project .project-video,
+  .featured-project .slider-track,
+  .featured-project .slider-track figure,
+  .featured-project .project-static-preview figure,
+  .featured-project .project-visual figure {
+    border-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+
+  .featured-project .project-video {
+    box-shadow: none;
+  }
+}
