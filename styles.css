@@ -600,6 +600,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs,
 .project-gee-gui,
 .project-wildfire,
+.project-roof,
 .project-recovery,
 .project-flood {
   grid-template-columns: 1fr;
@@ -624,6 +625,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .project-copy,
 .project-gee-gui .project-copy,
 .project-wildfire .project-copy,
+.project-roof .project-copy,
 .project-recovery .project-copy,
 .project-flood .project-copy,
 .project-awesome-geoai .project-copy {
@@ -636,6 +638,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .project-slider,
 .project-gee-gui .project-slider,
 .project-wildfire .project-slider,
+.project-roof .project-slider,
 .project-recovery .project-slider,
 .project-flood .project-slider,
 .project-awesome-geoai .project-static-preview {
@@ -689,11 +692,13 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track,
 .project-gee-gui .slider-track,
 .project-wildfire .slider-track,
+.project-roof .slider-track,
 .project-recovery .slider-track,
 .project-flood .slider-track,
 .project-thermolabs .slider-track figure,
 .project-gee-gui .slider-track figure,
 .project-wildfire .slider-track figure,
+.project-roof .slider-track figure,
 .project-recovery .slider-track figure,
 .project-flood .slider-track figure,
 .project-awesome-geoai .project-static-preview,
@@ -993,6 +998,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track .media-button,
 .project-gee-gui .slider-track .media-button,
 .project-wildfire .slider-track .media-button,
+.project-roof .slider-track .media-button,
 .project-recovery .slider-track .media-button,
 .project-flood .slider-track .media-button,
 .project-awesome-geoai .project-static-preview .media-button,
@@ -1007,6 +1013,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track img,
 .project-gee-gui .slider-track img,
 .project-wildfire .slider-track img,
+.project-roof .slider-track img,
 .project-recovery .slider-track img,
 .project-flood .slider-track img,
 .project-awesome-geoai .project-static-preview img {
@@ -1020,10 +1027,11 @@ main > .section::-webkit-scrollbar {
   padding: 0;
 }
 
-/* Show 05, 08, 10 and 11 images whole: no crop, no fade, dots below the frame. */
+/* Show 05, 08, 10, 11 and 12 images whole: no crop, no fade, dots below the frame. */
 .project-thermolabs .slider-track img,
 .project-gee-gui .slider-track img,
 .project-wildfire .slider-track img,
+.project-roof .slider-track img,
 .project-recovery .slider-track img,
 .project-flood .slider-track img {
   object-fit: contain;
@@ -1032,6 +1040,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-track::after,
 .project-gee-gui .slider-track::after,
 .project-wildfire .slider-track::after,
+.project-roof .slider-track::after,
 .project-recovery .slider-track::after,
 .project-flood .slider-track::after {
   display: none;
@@ -1040,6 +1049,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .project-slider,
 .project-gee-gui .project-slider,
 .project-wildfire .project-slider,
+.project-roof .project-slider,
 .project-recovery .project-slider,
 .project-flood .project-slider {
   padding-bottom: 34px;
@@ -1068,8 +1078,10 @@ main > .section::-webkit-scrollbar {
   object-fit: contain;
 }
 
-/* The wildfire figures are wide multi-panel plots. */
+/* The wildfire and roof figures are wide multi-panel plots. */
 .project-wildfire .slider-track,
+.project-roof .slider-track,
+.project-roof .slider-track figure,
 .project-wildfire .slider-track figure {
   aspect-ratio: 12 / 5;
 }
@@ -1077,6 +1089,7 @@ main > .section::-webkit-scrollbar {
 .project-thermolabs .slider-dots,
 .project-gee-gui .slider-dots,
 .project-wildfire .slider-dots,
+.project-roof .slider-dots,
 .project-recovery .slider-dots,
 .project-flood .slider-dots {
   bottom: 2px;
@@ -2216,6 +2229,7 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .project-copy,
   .project-gee-gui .project-copy,
   .project-wildfire .project-copy,
+  .project-roof .project-copy,
   .project-recovery .project-copy,
   .project-flood .project-copy,
   .project-awesome-geoai .project-copy,
@@ -2224,6 +2238,7 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .project-slider,
   .project-gee-gui .project-slider,
   .project-wildfire .project-slider,
+  .project-roof .project-slider,
   .project-recovery .project-slider,
   .project-flood .project-slider,
   .project-awesome-geoai .project-static-preview {
@@ -2278,11 +2293,13 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .slider-track,
   .project-gee-gui .slider-track,
   .project-wildfire .slider-track,
+  .project-roof .slider-track,
   .project-recovery .slider-track,
   .project-flood .slider-track,
   .project-thermolabs .slider-track figure,
   .project-gee-gui .slider-track figure,
   .project-wildfire .slider-track figure,
+  .project-roof .slider-track figure,
   .project-recovery .slider-track figure,
   .project-flood .slider-track figure,
   .project-awesome-geoai .project-static-preview,
@@ -2292,6 +2309,8 @@ main > .section::-webkit-scrollbar {
   }
 
   .project-wildfire .slider-track,
+  .project-roof .slider-track,
+  .project-roof .slider-track figure,
   .project-wildfire .slider-track figure {
     aspect-ratio: 2 / 1;
   }
@@ -2308,6 +2327,7 @@ main > .section::-webkit-scrollbar {
   .project-thermolabs .slider-track img,
   .project-gee-gui .slider-track img,
   .project-wildfire .slider-track img,
+  .project-roof .slider-track img,
   .project-recovery .slider-track img,
   .project-flood .slider-track img,
   .project-awesome-geoai .project-static-preview img {
@@ -3131,6 +3151,7 @@ main > .section::-webkit-scrollbar {
     padding-top: 62.5%;
   }
 
+  .project-roof .slider-track::before,
   .project-wildfire .slider-track::before {
     padding-top: 50%;
   }

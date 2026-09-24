@@ -19,7 +19,7 @@
     <meta property="og:image" content="https://homayounrezaie.github.io/images/profile.jpeg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://homayounrezaie.github.io/images/profile.jpeg" />
-    <link rel="stylesheet" href="styles.css?v=20260924" />
+    <link rel="stylesheet" href="styles.css?v=20260924b" />
   </head>
   <body>
     <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
@@ -886,6 +886,108 @@
                   Read the paper
                 </a>
               </div>
+            </div>
+          </article>
+          <article class="featured-project project-roof">
+            <div class="project-slider" data-slider aria-label="Roof reconstruction slideshow">
+              <div class="slider-track">
+                <figure class="is-active" data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/rgb-full.webp"
+                    data-modal-caption="Drone image of four neighbouring houses, with trees covering parts of the roofs"
+                    data-modal-group="roof"
+                    aria-label="Open RGB drone image preview"
+                  >
+                    <img src="projects/optimized/roof/rgb-960.webp" srcset="projects/optimized/roof/rgb-960.webp 960w, projects/optimized/roof/rgb-full.webp 2008w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="401" alt="Drone image of four neighbouring houses, with trees covering parts of the roofs" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/facets-full.webp"
+                    data-modal-caption="Roof facets found by SAM and CLIP, with tree canopy marked as occluder and lawn as known ground"
+                    data-modal-group="roof"
+                    aria-label="Open roof facet segmentation preview"
+                  >
+                    <img src="projects/optimized/roof/facets-960.webp" srcset="projects/optimized/roof/facets-960.webp 960w, projects/optimized/roof/facets-full.webp 2008w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="401" alt="Roof facets found by SAM and CLIP, with tree canopy marked as occluder and lawn as known ground" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/seams-full.webp"
+                    data-modal-caption="Facet adjacency graph with ridge, valley, and hip seams, and the roof type of each building"
+                    data-modal-group="roof"
+                    aria-label="Open facet graph and seams preview"
+                  >
+                    <img src="projects/optimized/roof/seams-960.webp" srcset="projects/optimized/roof/seams-960.webp 960w, projects/optimized/roof/seams-full.webp 2008w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="401" alt="Facet adjacency graph with ridge, valley, and hip seams, and the roof type of each building" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/recovered-full.webp"
+                    data-modal-caption="Roof edges hidden under trees, recovered by facet edge extension, mirror symmetry, and Manhattan fill"
+                    data-modal-group="roof"
+                    aria-label="Open recovered hidden edges preview"
+                  >
+                    <img src="projects/optimized/roof/recovered-960.webp" srcset="projects/optimized/roof/recovered-960.webp 960w, projects/optimized/roof/recovered-full.webp 2008w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="401" alt="Roof edges hidden under trees, recovered by facet edge extension, mirror symmetry, and Manhattan fill" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+                <figure data-slide>
+                  <button
+                    class="media-button"
+                    type="button"
+                    data-modal-image="projects/optimized/roof/polygons-full.webp"
+                    data-modal-caption="Final roof facet polygons, with the area recovered under trees hatched"
+                    data-modal-group="roof"
+                    aria-label="Open final roof polygons preview"
+                  >
+                    <img src="projects/optimized/roof/polygons-960.webp" srcset="projects/optimized/roof/polygons-960.webp 960w, projects/optimized/roof/polygons-full.webp 2008w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="401" alt="Final roof facet polygons, with the area recovered under trees hatched" loading="lazy" decoding="async" />
+                  </button>
+                </figure>
+              </div>
+              <div class="slider-controls" aria-label="Slideshow controls">
+                <button type="button" data-slider-prev aria-label="Previous roof preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
+                </button>
+                <div class="slider-dots" aria-label="Slide position">
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show RGB drone image"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show roof facet segmentation"></button>
+                  <button type="button" data-slide-dot="2" aria-label="Show facet graph and seams"></button>
+                  <button type="button" data-slide-dot="3" aria-label="Show recovered hidden edges"></button>
+                  <button type="button" data-slide-dot="4" aria-label="Show final roof polygons"></button>
+                </div>
+                <button type="button" data-slider-next aria-label="Next roof preview">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
+            <div class="project-copy">
+              <h3>12 Neural Roof Reconstruction under the Manhattan-World Assumption</h3>
+              <p>
+                Neural networks find roofs well, but their outlines are messy
+                and blobby, and trees hide parts of the edges. Most houses,
+                though, are just 2–4 rectangles at right angles.
+              </p>
+              <p>
+                So I combined a <strong>segmentation model</strong> with the
+                <strong>Manhattan-world assumption</strong>: every roof edge
+                runs in one of two perpendicular directions. The method finds
+                the house orientation, fits a few perpendicular rectangles to
+                the roof mask, and merges them into one clean polygon. Where
+                trees block the view, the 90° rule fills in the hidden edges
+                and corners.
+              </p>
+              <p>
+                The result is a clean, regular roof polygon, ready for
+                <strong>3D modeling</strong> and <strong>energy analysis</strong>.
+              </p>
             </div>
           </article>
         </div>
