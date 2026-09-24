@@ -3095,17 +3095,17 @@ main > .section::-webkit-scrollbar {
 }
 
 /* Phones in portrait: project media runs edge to edge. The section has 20px
-   side padding, so pull each media block out by that much, with only a
-   slight corner radius. */
+   side padding, so pull each media block out to 1px from the screen edge,
+   with only a slight corner radius. */
 @media (max-width: 767px) {
   .featured-project .project-video,
   .featured-project .project-slider,
   .featured-project .project-static-preview,
   .featured-project .project-visual {
-    width: calc(100% + 40px);
+    width: calc(100% + 38px);
     max-width: none;
     max-height: none;
-    margin-inline: -20px;
+    margin-inline: -19px;
     align-self: stretch;
     border-radius: 10px;
   }
