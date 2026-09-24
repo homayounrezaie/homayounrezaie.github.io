@@ -2924,14 +2924,14 @@ main > .section::-webkit-scrollbar {
 }
 
 /* ---------------------------------------------------------------------------
-   HeatLive video: the footage is 3840x1896 (2.02:1) but the box was a flat
-   600px tall, so object-fit letterboxed it inside 127px of black bars and
-   pushed the card to 959px inside an 810px page. Give the box the footage's
-   own ratio and bound it by viewport height, so it fills edge to edge and
-   the card fits the screen.
+   HeatLive video: the box was a flat 600px tall, so object-fit letterboxed
+   the footage in black bars and pushed the card past its page. Give the box
+   the footage's own ratio (1920x1084 after cropping the left panel) and
+   bound it by viewport height, so it fills edge to edge and the card fits
+   the screen.
    --------------------------------------------------------------------------- */
 .project-heatlive .project-video {
-  aspect-ratio: 3840 / 1896;
+  aspect-ratio: 1920 / 1084;
   height: auto;
   /* Same width rule as the Agentic GeoAI slider so the two media blocks line
      up; the height cap only bites on short viewports, where it keeps the card
