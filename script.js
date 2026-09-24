@@ -177,6 +177,15 @@ document.querySelectorAll("[data-slider]").forEach((slider) => {
     slides.forEach((slide, slideIndex) => {
       slide.classList.toggle("is-active", slideIndex === activeIndex);
       slide.toggleAttribute("aria-hidden", slideIndex !== activeIndex);
+
+      // Only the visible slide's video keeps playing.
+      const video = slide.querySelector("video");
+      if (!video) return;
+      if (slideIndex === activeIndex) {
+        if (video.autoplay) video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
     });
 
     dots.forEach((dot, dotIndex) => {
