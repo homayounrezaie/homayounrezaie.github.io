@@ -2152,8 +2152,12 @@ main > .section::-webkit-scrollbar {
     white-space: normal;
   }
 
+  /* A plain column instead of a one-column grid: after rotating back from
+     landscape, iOS kept the old grid row heights and stretched the sliders,
+     leaving empty space under the images. */
   .featured-project {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 18px;
     padding: 28px 0;
   }
