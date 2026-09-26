@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+
+# Flood simulation inputs and renders (large, kept local)
+projects/flood/data/
+projects/flood/out/
