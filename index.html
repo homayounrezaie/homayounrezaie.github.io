@@ -300,32 +300,21 @@
                 nothing else, it's a quick <strong>digital twin</strong> for
                 "what if" scenarios.
               </p>
-              <p>
-                No LiDAR? <strong>Depth Anything</strong> is being tested to
-                build the terrain straight from RGB imagery, so the simulation
-                can run almost anywhere.
-              </p>
             </div>
             <div class="project-slider" data-slider aria-label="Flash flood simulation slideshow">
               <div class="slider-track">
                 <figure class="is-active slide-video" data-slide>
+                  <video autoplay muted loop playsinline controls preload="metadata" aria-label="GPU flash flood simulation of the 2013 Calgary flood">
+                    <source src="projects/flood/calgary_flood_2013.mp4" type="video/mp4" />
+                    Your browser does not support this video.
+                  </video>
+                </figure>
+                <figure class="slide-video" data-slide>
                   <video autoplay muted loop playsinline controls preload="metadata" aria-label="GPU flash flood simulation over a digital terrain model">
                     <source src="projects/flood/flood.webm" type="video/webm" />
                     <source src="projects/flood/flood.mp4" type="video/mp4" />
                     Your browser does not support this video.
                   </video>
-                </figure>
-                <figure data-slide>
-                  <button
-                    class="media-button"
-                    type="button"
-                    data-modal-image="projects/optimized/flood/water-depth-1280.webp"
-                    data-modal-caption="Water depth mapped from NASA's SWOT satellite (image: NASA)"
-                    data-modal-group="flood"
-                    aria-label="Open satellite water depth map"
-                  >
-                    <img src="projects/optimized/flood/water-depth-960.webp" srcset="projects/optimized/flood/water-depth-960.webp 960w, projects/optimized/flood/water-depth-1280.webp 1280w" sizes="(max-width: 1000px) 100vw, 960px" width="960" height="540" alt="Satellite map of water depth in a valley, from 0 to over 1 metre" loading="lazy" decoding="async" />
-                  </button>
                 </figure>
               </div>
               <div class="slider-controls" aria-label="Slideshow controls">
@@ -333,8 +322,8 @@
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 5 8.5 12l7 7" /></svg>
                 </button>
                 <div class="slider-dots" aria-label="Slide position">
-                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show flood simulation video"></button>
-                  <button type="button" data-slide-dot="1" aria-label="Show satellite water depth map"></button>
+                  <button class="is-active" type="button" data-slide-dot="0" aria-label="Show Calgary 2013 flood simulation video"></button>
+                  <button type="button" data-slide-dot="1" aria-label="Show flood simulation video"></button>
                 </div>
                 <button type="button" data-slider-next aria-label="Next flood preview">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8.5 5 7 7-7 7" /></svg>
